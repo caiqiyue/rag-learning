@@ -6,10 +6,26 @@
 *.gz
 *.tar.gz
 
-# 课件资料压缩包
-课件资料.zip
-演示资料.zip
-其他资料.zip
-
 # Claude 相关
 .claude/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Vector store / embeddings
+vector_store/
+chromadb/
+pinecone_data/
+milvus_data/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
