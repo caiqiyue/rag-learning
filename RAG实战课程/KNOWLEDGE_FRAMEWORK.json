@@ -1,0 +1,109 @@
+{
+  "framework_name": "RAG实战课程知识框架",
+  "description": "企业级RAG（检索增强生成）知识框架，涵盖从基础认知到企业级实战的完整学习路径",
+  "target_audience": "初学者 - 具备Python基础、了解大模型基本概念",
+  "prerequisites": [
+    "Python基础",
+    "了解大模型基本概念（Prompt、Token、Chat Completions API）"
+  ],
+  "levels": [
+    {
+      "level_name": "基础",
+      "modules": [
+        {
+          "module_name": "模块 1.1: RAG基础认知",
+          "description": "理解大模型的知识困境和RAG的核心思想",
+          "learning_objectives": [
+            "理解大模型的四大知识局限",
+            "掌握三种知识注入方案的差异",
+            "理解RAG的核心思想（检索-增强-生成）"
+          ],
+          "estimated_duration": "2-3天"
+        },
+        {
+          "module_name": "模块 1.2: RAG系统架构",
+          "description": "掌握RAG核心组件和数据流转过程",
+          "learning_objectives": [
+            "掌握RAG六大核心组件",
+            "理解数据流转全过程",
+            "了解主流开发框架（LangChain/LlamaIndex）"
+          ],
+          "estimated_duration": "2-3天"
+        }
+      ]
+    },
+    {
+      "level_name": "进阶",
+      "modules": [
+        {
+          "module_name": "模块 2.1: 多格式文档解析",
+          "description": "掌握企业级文档解析技术",
+          "learning_objectives": [
+            "掌握PDF、Word、Excel等格式解析",
+            "理解不同文档类型的解析挑战",
+            "能够处理多格式混合文档"
+          ],
+          "estimated_duration": "3-4天"
+        },
+        {
+          "module_name": "模块 2.2: 文档切分策略",
+          "description": "掌握数据清洗和智能切分",
+          "learning_objectives": [
+            "掌握数据清洗与预处理",
+            "理解多种切分策略",
+            "能够设计合理的切分方案"
+          ],
+          "estimated_duration": "2-3天"
+        },
+        {
+          "module_name": "模块 2.3: Embedding与向量数据库",
+          "description": "掌握向量化和向量检索技术",
+          "learning_objectives": [
+            "理解Embedding原理",
+            "掌握主流向量数据库",
+            "能够搭建向量存储检索系统"
+          ],
+          "estimated_duration": "3-4天"
+        }
+      ]
+    },
+    {
+      "level_name": "高级",
+      "modules": [
+        {
+          "module_name": "模块 3.1: 高级检索策略",
+          "description": "掌握召回-精排-重排全流程",
+          "learning_objectives": [
+            "理解检索流程四步",
+            "掌握检索优化技术",
+            "能够优化检索效果"
+          ],
+          "estimated_duration": "3-4天"
+        },
+        {
+          "module_name": "模块 3.2: RAG评估体系",
+          "description": "掌握RAG系统性评估方法",
+          "learning_objectives": [
+            "理解RAG评估指标",
+            "掌握主流评估工具",
+            "能够系统性评估RAG系统"
+          ],
+          "estimated_duration": "2-3天"
+        },
+        {
+          "module_name": "模块 3.3: 企业级RAG实战",
+          "description": "掌握企业级RAG架构设计",
+          "learning_objectives": [
+            "理解从原型到生产的迁移",
+            "掌握工程化最佳实践",
+            "能够设计企业级RAG系统"
+          ],
+          "estimated_duration": "3-4天"
+        }
+      ]
+    }
+  ],
+  "total_modules": 8,
+  "total_lessons": 9,
+  "total_duration": "约2-3周"
+}

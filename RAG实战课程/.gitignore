@@ -1,0 +1,15 @@
+# 压缩包
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+*.tar.gz
+
+# 课件资料压缩包
+课件资料.zip
+演示资料.zip
+其他资料.zip
+
+# Claude 相关
+.claude/
