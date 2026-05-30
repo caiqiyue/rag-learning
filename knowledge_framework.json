@@ -1,0 +1,249 @@
+{
+  "framework": {
+    "title": "企业级RAG知识框架",
+    "description": "从基础概念到企业级实践的完整RAG知识体系，覆盖检索增强生成的核心原理、组件解析、开发框架、高级策略与企业级架构设计",
+    "modules": [
+      {
+        "id": "mod_001",
+        "title": "RAG基础概念与工作原理",
+        "description": "RAG核心概念与两阶段工作流程，帮助学员建立对RAG系统的整体认知",
+        "objectives": [
+          "理解RAG的本质是'查资料后再回答问题'的开卷考试模式",
+          "掌握RAG离线阶段和在线推理阶段的全流程",
+          "区分Naive RAG、Advanced RAG、Modular RAG、Agentic RAG四代演进"
+        ],
+        "deliverables": [
+          "RAG核心概念思维导图",
+          "两阶段工作流程图"
+        ],
+        "knowledge_points": ["kp_001", "kp_002", "kp_009"],
+        "level": "basic"
+      },
+      {
+        "id": "mod_002",
+        "title": "文档加载解析与预处理",
+        "description": "企业级文档处理的完整流程，包括多种格式解析与数据清洗",
+        "objectives": [
+          "掌握使用unstructured.io等库解析PDF、Word、TXT、Markdown等格式",
+          "理解不同数据类型的清洗策略：纯文本、表格、图像、代码",
+          "具备处理跨页表格、OCR识别等企业实际难题的能力"
+        ],
+        "deliverables": [
+          "多格式文档解析代码示例",
+          "企业文档预处理流程文档"
+        ],
+        "knowledge_points": ["kp_003", "kp_010", "kp_032"],
+        "level": "basic"
+      },
+      {
+        "id": "mod_003",
+        "title": "文档分割与向量化",
+        "description": "文档分割策略与Embedding向量化的原理与实践",
+        "objectives": [
+          "掌握RecursiveCharacterTextSplitter、TokenTextSplitter等常用分割器",
+          "理解SemanticSplitter和SentenceWindow等高级分割策略",
+          "理解Embedding原理，熟悉余弦相似度和欧氏距离计算"
+        ],
+        "deliverables": [
+          "文档分割策略对比实验代码",
+          "Embedding相似度计算示例"
+        ],
+        "knowledge_points": ["kp_004", "kp_005"],
+        "level": "basic"
+      },
+      {
+        "id": "mod_004",
+        "title": "向量数据库选型与元数据过滤",
+        "description": "主流向量数据库的原理、选型要点及元数据过滤机制",
+        "objectives": [
+          "掌握ChromaDB、FAISS、Milvus、Pinecone的适用场景",
+          "理解向量数据库的索引类型和存储能力",
+          "熟练运用元数据过滤缩小检索范围"
+        ],
+        "deliverables": [
+          "向量数据库选型指南",
+          "元数据过滤配置示例"
+        ],
+        "knowledge_points": ["kp_006", "kp_019"],
+        "level": "advanced"
+      },
+      {
+        "id": "mod_005",
+        "title": "检索器与相似度检索",
+        "description": "多种检索器类型、Top-K检索策略及后处理机制",
+        "objectives": [
+          "掌握VectorIndexRetriever、BM25Retriever、QueryFusionRetriever的原理",
+          "理解向量检索与BM25词频统计的区别与适用场景",
+          "掌握Token预算控制与检索结果过滤排序"
+        ],
+        "deliverables": [
+          "检索器对比实验代码",
+          "Top-K检索与后处理流程图"
+        ],
+        "knowledge_points": ["kp_007", "kp_012"],
+        "level": "advanced"
+      },
+      {
+        "id": "mod_006",
+        "title": "混合检索与重排序策略",
+        "description": "企业级检索质量提升的核心策略：混合检索+Rerank精排",
+        "objectives": [
+          "掌握QueryFusionRetriever的reciprocal_rerank融合模式",
+          "理解Cross-Encoder和专用Reranker的精排原理",
+          "能够设计两阶段检索流程：粗召回+精排"
+        ],
+        "deliverables": [
+          "混合检索+Rerank完整流程代码",
+          "两阶段检索架构图"
+        ],
+        "knowledge_points": ["kp_014", "kp_013"],
+        "level": "enterprise"
+      },
+      {
+        "id": "mod_007",
+        "title": "提示词工程与答案生成",
+        "description": "提示增强模板设计、流式输出与LLM答案生成",
+        "objectives": [
+          "掌握检索结果与用户问题组合成增强提示的方法",
+          "理解流式输出对用户体验的提升",
+          "能够设计企业级提示模板"
+        ],
+        "deliverables": [
+          "提示增强模板代码示例",
+          "流式输出实现方案"
+        ],
+        "knowledge_points": ["kp_008", "kp_015"],
+        "level": "basic"
+      },
+      {
+        "id": "mod_008",
+        "title": "LlamaIndex核心对象与存储架构",
+        "description": "Document、Node核心对象及StorageContext存储架构",
+        "objectives": [
+          "掌握Document和Node的关系与使用场景",
+          "理解StorageContext的四种核心存储管理",
+          "能够使用LlamaIndex构建完整RAG流程"
+        ],
+        "deliverables": [
+          "LlamaIndex核心对象使用示例",
+          "StorageContext配置代码"
+        ],
+        "knowledge_points": ["kp_011", "kp_020"],
+        "level": "advanced"
+      },
+      {
+        "id": "mod_009",
+        "title": "RAG质量评估体系",
+        "description": "检索与生成质量的评估指标、评估框架与参数调优",
+        "objectives": [
+          "掌握无序评估(召回率、精确率、命中率)和有序评估(MRR、NDCG)",
+          "理解Faithfulness、Answer Relevancy、Contextual Precision等生成指标",
+          "能够使用DeepEval、Trulens框架进行系统评估"
+        ],
+        "deliverables": [
+          "RAG评估指标手册",
+          "DeepEval/Trulens集成代码"
+        ],
+        "knowledge_points": ["kp_016", "kp_017", "kp_018"],
+        "level": "enterprise"
+      },
+      {
+        "id": "mod_010",
+        "title": "高级检索策略",
+        "description": "HyDE、Self-RAG、GraphRAG等最新检索增强技术",
+        "objectives": [
+          "掌握HyDE生成假设文档再检索的创新范式",
+          "理解Self-RAG的自我反思检索机制",
+          "了解GraphRAG利用知识图谱增强检索的能力"
+        ],
+        "deliverables": [
+          "HyDE实现代码示例",
+          "Self-RAG流程图"
+        ],
+        "knowledge_points": ["kp_021", "kp_022", "kp_023"],
+        "level": "advanced"
+      },
+      {
+        "id": "mod_011",
+        "title": "模块化RAG与智能体架构",
+        "description": "Modular RAG模块化设计、Agentic RAG智能决策能力",
+        "objectives": [
+          "理解Modular RAG将系统拆分为独立模块的设计思想",
+          "掌握Agentic RAG的自主决策能力：判断检索时机、选择知识库",
+          "能够设计灵活组合的模块化RAG架构"
+        ],
+        "deliverables": [
+          "Modular RAG架构设计图",
+          "Agentic RAG决策流程代码"
+        ],
+        "knowledge_points": ["kp_026", "kp_027"],
+        "level": "enterprise"
+      },
+      {
+        "id": "mod_012",
+        "title": "复杂查询处理与上下文压缩",
+        "description": "Query Decomposition、CRAG、上下文压缩等高级处理策略",
+        "objectives": [
+          "掌握复杂问题拆解为多个子问题分别检索的技术",
+          "理解CRAG对低质量检索的主动降级机制",
+          "掌握检索结果的去冗余压缩和引用验证"
+        ],
+        "deliverables": [
+          "Query Decomposition代码示例",
+          "CRAG决策流程图",
+          "上下文压缩实现"
+        ],
+        "knowledge_points": ["kp_024", "kp_025", "kp_029"],
+        "level": "enterprise"
+      },
+      {
+        "id": "mod_013",
+        "title": "多模态RAG与最新技术",
+        "description": "多模态检索能力扩展及RAG领域最新技术趋势",
+        "objectives": [
+          "理解图像、音频、视频等多模态内容的检索技术路径",
+          "了解多模态embedding和Cross-modal retrieval",
+          "掌握Visual QA等视觉问答技术"
+        ],
+        "deliverables": [
+          "多模态RAG架构图",
+          "多模态检索技术路线文档"
+        ],
+        "knowledge_points": ["kp_028"],
+        "level": "enterprise"
+      },
+      {
+        "id": "mod_014",
+        "title": "企业级RAG架构设计",
+        "description": "生产环境RAG系统的高可用、扩展、安全、成本控制设计",
+        "objectives": [
+          "掌握高可用设计与水平扩展能力的架构要点",
+          "理解安全权限、审计溯源、多租户隔离的企业级需求",
+          "能够进行成本控制与ROI优化分析"
+        ],
+        "deliverables": [
+          "企业级RAG架构设计文档",
+          "成本优化策略清单"
+        ],
+        "knowledge_points": ["kp_030", "kp_031"],
+        "level": "enterprise"
+      },
+      {
+        "id": "mod_015",
+        "title": "RAG常见误区与最佳实践",
+        "description": "企业级RAG实施中的常见错误与规避策略",
+        "objectives": [
+          "识别文档分割、Embedding选择、检索策略等常见误区",
+          "掌握企业级RAG最佳实践：分割策略、检索调优、提示优化",
+          "能够进行端到端RAG系统的性能调优"
+        ],
+        "deliverables": [
+          "常见误区清单与规避指南",
+          "RAG最佳实践手册"
+        ],
+        "knowledge_points": ["kp_001", "kp_004", "kp_007", "kp_012", "kp_014"],
+        "level": "intermediate"
+      }
+    ]
+  }
+}

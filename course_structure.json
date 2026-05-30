@@ -1,0 +1,223 @@
+{
+  "course_structure": {
+    "total_lessons": 18,
+    "lessons": [
+      {
+        "lesson_id": "lesson_01",
+        "title": "RAG基础概念与工作原理",
+        "objectives": [
+          "理解RAG的核心定义和应用场景",
+          "掌握RAG系统的工作流程和各组件作用",
+          "能够区分RAG与传统搜索引擎的差异"
+        ],
+        "has_code_example": true,
+        "code_files": ["rag_basic_concept.py"],
+        "framework_ref": ["mod_001"]
+      },
+      {
+        "lesson_id": "lesson_02",
+        "title": "文档加载解析与预处理",
+        "objectives": [
+          "掌握Python中主流文档格式的加载方法",
+          "理解不同文档格式（PDF、Word、HTML、TXT）的解析差异",
+          "能够处理文档编码和结构识别问题"
+        ],
+        "has_code_example": true,
+        "code_files": ["document_loader.py"],
+        "framework_ref": ["mod_002"]
+      },
+      {
+        "lesson_id": "lesson_03",
+        "title": "文档分割策略与实现",
+        "objectives": [
+          "理解为什么文档分割影响RAG效果",
+          "掌握基于字符、语义、结构的多种分割方法",
+          "能够根据业务场景选择合适的分割策略"
+        ],
+        "has_code_example": true,
+        "code_files": ["text_splitter.py"],
+        "framework_ref": ["mod_003"]
+      },
+      {
+        "lesson_id": "lesson_04",
+        "title": "向量化模型选型与嵌入生成",
+        "objectives": [
+          "理解文本向量化的核心原理",
+          "掌握主流嵌入模型（如OpenAI Embedding、BGE）的使用方法",
+          "能够根据业务场景选择合适的向量化模型"
+        ],
+        "has_code_example": true,
+        "code_files": ["embedding_generator.py"],
+        "framework_ref": ["mod_003"]
+      },
+      {
+        "lesson_id": "lesson_05",
+        "title": "向量数据库选型与元数据过滤",
+        "objectives": [
+          "掌握主流向量数据库（Milvus、Pinecone、Chroma、FAISS）的特点和选型",
+          "理解元数据结构设计与过滤查询方法",
+          "能够设计企业级向量存储架构"
+        ],
+        "has_code_example": true,
+        "code_files": ["vector_store_select.py", "metadata_filter.py"],
+        "framework_ref": ["mod_004"]
+      },
+      {
+        "lesson_id": "lesson_06",
+        "title": "检索器类型与相似度计算",
+        "objectives": [
+          "理解余弦相似度、点积、欧氏距离等相似度度量",
+          "掌握Top-K检索和相似度阈值检索的实现方法",
+          "能够优化检索结果的相关性"
+        ],
+        "has_code_example": true,
+        "code_files": ["retriever_types.py"],
+        "framework_ref": ["mod_005"]
+      },
+      {
+        "lesson_id": "lesson_07",
+        "title": "提示词工程核心原理",
+        "objectives": [
+          "理解提示词工程在RAG中的关键作用",
+          "掌握系统提示词、用户提示词、上下文提示词的设计方法",
+          "能够构建企业级RAG提示词模板"
+        ],
+        "has_code_example": true,
+        "code_files": ["prompt_engineering.py"],
+        "framework_ref": ["mod_007"]
+      },
+      {
+        "lesson_id": "lesson_08",
+        "title": "答案生成与引用溯源",
+        "objectives": [
+          "理解LLM答案生成的工作原理",
+          "掌握生成答案时引用source chunks的方法",
+          "能够构建可溯源的RAG答案生成流程"
+        ],
+        "has_code_example": true,
+        "code_files": ["answer_generator.py"],
+        "framework_ref": ["mod_007"]
+      },
+      {
+        "lesson_id": "lesson_09",
+        "title": "LlamaIndex核心对象与存储架构",
+        "objectives": [
+          "理解LlamaIndex的核心概念（Index、QueryEngine、Retriever）",
+          "掌握StorageContext和Document的存储管理",
+          "能够使用LlamaIndex构建完整RAG流程"
+        ],
+        "has_code_example": true,
+        "code_files": ["llamaindex_core.py"],
+        "framework_ref": ["mod_008"]
+      },
+      {
+        "lesson_id": "lesson_10",
+        "title": "高级检索策略",
+        "objectives": [
+          "理解上下文压缩和查询变换的原理",
+          "掌握Sentence Window Retrieval、Parent Document Retrieval等高级策略",
+          "能够针对复杂查询场景设计检索方案"
+        ],
+        "has_code_example": true,
+        "code_files": ["advanced_retrieval.py"],
+        "framework_ref": ["mod_010"]
+      },
+      {
+        "lesson_id": "lesson_11",
+        "title": "混合检索与重排序策略",
+        "objectives": [
+          "理解向量检索与关键词检索的互补原理",
+          "掌握BM25、密集检索、混合检索的实现方法",
+          "能够使用重排序模型（如BGE-Reranker）优化结果排序"
+        ],
+        "has_code_example": true,
+        "code_files": ["hybrid_search.py", "reranking.py"],
+        "framework_ref": ["mod_006"]
+      },
+      {
+        "lesson_id": "lesson_12",
+        "title": "RAG质量评估体系",
+        "objectives": [
+          "理解RAG评估的核心指标（Faithfulness、Answer Relevance、Context Relevance）",
+          "掌握RAGAS等评估框架的使用方法",
+          "能够建立企业级RAG质量评估流程"
+        ],
+        "has_code_example": true,
+        "code_files": ["rag_evaluation.py"],
+        "framework_ref": ["mod_009"]
+      },
+      {
+        "lesson_id": "lesson_13",
+        "title": "模块化RAG架构设计",
+        "objectives": [
+          "理解模块化RAG的核心思想（Dataflow、Router、Query Pipeline）",
+          "掌握LlamaIndex Pipeline组件的使用方法",
+          "能够设计可扩展的企业级RAG架构"
+        ],
+        "has_code_example": true,
+        "code_files": ["modular_rag.py"],
+        "framework_ref": ["mod_011"]
+      },
+      {
+        "lesson_id": "lesson_14",
+        "title": "RAG智能体架构与工具调用",
+        "objectives": [
+          "理解RAG智能体的核心组件（Agent、Tool、Memory）",
+          "掌握ReAct范式在RAG中的应用",
+          "能够构建具备工具调用能力的RAG智能体"
+        ],
+        "has_code_example": true,
+        "code_files": ["rag_agent.py"],
+        "framework_ref": ["mod_011"]
+      },
+      {
+        "lesson_id": "lesson_15",
+        "title": "复杂查询处理与上下文压缩",
+        "objectives": [
+          "理解多跳查询和复杂查询的处理方法",
+          "掌握上下文压缩（Context Compression）技术",
+          "能够处理长文本和跨文档的复杂查询场景"
+        ],
+        "has_code_example": true,
+        "code_files": ["complex_query.py", "context_compression.py"],
+        "framework_ref": ["mod_012"]
+      },
+      {
+        "lesson_id": "lesson_16",
+        "title": "多模态RAG与最新技术",
+        "objectives": [
+          "理解多模态RAG的原理（文本、图像、视频）",
+          "掌握图文检索和视频检索的实现方法",
+          "了解最新RAG技术发展趋势"
+        ],
+        "has_code_example": true,
+        "code_files": ["multimodal_rag.py"],
+        "framework_ref": ["mod_013"]
+      },
+      {
+        "lesson_id": "lesson_17",
+        "title": "企业级RAG架构设计与实践",
+        "objectives": [
+          "掌握企业级RAG架构设计原则",
+          "理解生产环境中的高可用、高性能优化策略",
+          "能够设计完整的RAG系统架构"
+        ],
+        "has_code_example": true,
+        "code_files": ["enterprise_rag_architecture.py"],
+        "framework_ref": ["mod_014"]
+      },
+      {
+        "lesson_id": "lesson_18",
+        "title": "RAG常见误区与最佳实践",
+        "objectives": [
+          "识别RAG开发中的常见误区",
+          "掌握企业级RAG最佳实践",
+          "能够避免RAG系统设计中的常见陷阱"
+        ],
+        "has_code_example": true,
+        "code_files": ["rag_best_practices.py"],
+        "framework_ref": ["mod_015"]
+      }
+    ]
+  }
+}
