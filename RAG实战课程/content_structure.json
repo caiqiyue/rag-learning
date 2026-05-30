@@ -1,0 +1,240 @@
+{
+  "course_name": "RAG实战课程",
+  "total_lessons": 9,
+  "lessons": [
+    {
+      "lesson_id": "01",
+      "title": "RAG基础：为什么需要检索增强",
+      "slug": "rag-basics-why-retrieval-augmentation",
+      "core_knowledge_points": [
+        "大模型的四大知识局限",
+        "三种知识注入方案对比",
+        "RAG vs Fine-tuning vs Prompt Engineering"
+      ],
+      "teaching_objectives": [
+        "理解幻觉问题（Hallucination）的本质",
+        "理解知识截止（Knowledge Cutoff）的含义",
+        "理解领域盲区和上下文限制",
+        "掌握三种方案的适用场景"
+      ],
+      "content_file": "lessons/01-rag-basics-why-retrieval-augmentation/content.md",
+      "code_examples": []
+    },
+    {
+      "lesson_id": "02",
+      "title": "RAG核心思想：检索-增强-生成",
+      "slug": "rag-core-concept-retrieve-augment-generate",
+      "core_knowledge_points": [
+        "Retrieve（检索）的原理",
+        "Augment（增强）的实现",
+        "Generate（生成）的过程",
+        "RAG与联网搜索的关系"
+      ],
+      "teaching_objectives": [
+        "理解RAG三步走的核心逻辑",
+        "理解为什么RAG是'开卷考试'",
+        "理解广义RAG与狭义RAG的区别"
+      ],
+      "content_file": "lessons/02-rag-core-concept-retrieve-augment-generate/content.md",
+      "code_examples": []
+    },
+    {
+      "lesson_id": "03",
+      "title": "RAG系统架构与组件",
+      "slug": "rag-system-architecture",
+      "core_knowledge_points": [
+        "文档加载器（Document Loader）",
+        "文本切分器（Text Splitter）",
+        "Embedding模型",
+        "向量数据库",
+        "检索器与生成器"
+      ],
+      "teaching_objectives": [
+        "掌握RAG六大核心组件",
+        "理解完整的数据流转过程",
+        "了解LangChain和LlamaIndex的适用场景"
+      ],
+      "content_file": "lessons/03-rag-system-architecture/content.md",
+      "code_examples": [
+        {
+          "filename": "rag_components_demo.py",
+          "language": "python",
+          "description": "RAG组件串联演示"
+        }
+      ]
+    },
+    {
+      "lesson_id": "04",
+      "title": "多格式文档解析",
+      "slug": "multi-format-document-parsing",
+      "core_knowledge_points": [
+        "PDF解析（布局分析、文本提取）",
+        "Word解析（段落、表格）",
+        "Excel解析（结构化数据）",
+        "PPT解析（幻灯片内容）",
+        "OCR文字识别"
+      ],
+      "teaching_objectives": [
+        "掌握PDF文档解析方法",
+        "掌握Word/Excel/PPT解析",
+        "理解OCR在文档处理中的应用"
+      ],
+      "content_file": "lessons/04-multi-format-document-parsing/content.md",
+      "code_examples": [
+        {
+          "filename": "doc_parser.py",
+          "language": "python",
+          "description": "多格式文档解析器"
+        },
+        {
+          "filename": "pdf_parser.py",
+          "language": "python",
+          "description": "PDF专项解析"
+        }
+      ]
+    },
+    {
+      "lesson_id": "05",
+      "title": "文档切分策略",
+      "slug": "document-chunking-strategies",
+      "core_knowledge_points": [
+        "数据清洗与预处理",
+        "固定大小切分",
+        "递归切分（层次化）",
+        "语义切分（按句子/段落）",
+        "切分参数优化"
+      ],
+      "teaching_objectives": [
+        "掌握数据清洗技术",
+        "理解不同切分策略的优劣",
+        "能够根据业务场景设计切分方案"
+      ],
+      "content_file": "lessons/05-document-chunking-strategies/content.md",
+      "code_examples": [
+        {
+          "filename": "text_splitter.py",
+          "language": "python",
+          "description": "多种切分策略实现"
+        },
+        {
+          "filename": "data_cleaner.py",
+          "language": "python",
+          "description": "数据清洗工具"
+        }
+      ]
+    },
+    {
+      "lesson_id": "06",
+      "title": "Embedding与向量数据库",
+      "slug": "embedding-and-vector-database",
+      "core_knowledge_points": [
+        "Embedding模型原理",
+        "主流Embedding模型对比",
+        "向量数据库选型",
+        "相似度度量（余弦、点积）"
+      ],
+      "teaching_objectives": [
+        "理解Embedding的工作原理",
+        "掌握主流向量数据库的使用",
+        "能够搭建向量存储检索系统"
+      ],
+      "content_file": "lessons/06-embedding-and-vector-database/content.md",
+      "code_examples": [
+        {
+          "filename": "vector_store.py",
+          "language": "python",
+          "description": "向量数据库使用示例"
+        },
+        {
+          "filename": "embedding_demo.py",
+          "language": "python",
+          "description": "Embedding模型调用示例"
+        }
+      ]
+    },
+    {
+      "lesson_id": "07",
+      "title": "高级检索策略",
+      "slug": "advanced-retrieval-strategies",
+      "core_knowledge_points": [
+        "检索流程四步（Query向量化→召回→精排→过滤）",
+        "混合检索（关键词+向量）",
+        "重排序（Reranker）",
+        "上下文压缩"
+      ],
+      "teaching_objectives": [
+        "理解检索全流程",
+        "掌握检索优化技术",
+        "能够诊断和优化检索效果"
+      ],
+      "content_file": "lessons/07-advanced-retrieval-strategies/content.md",
+      "code_examples": [
+        {
+          "filename": "retriever.py",
+          "language": "python",
+          "description": "检索器实现"
+        },
+        {
+          "filename": "reranker.py",
+          "language": "python",
+          "description": "重排序示例"
+        }
+      ]
+    },
+    {
+      "lesson_id": "08",
+      "title": "RAG评估体系",
+      "slug": "rag-evaluation",
+      "core_knowledge_points": [
+        "检索质量指标（召回率、准确率）",
+        "生成质量指标（相关性、完整性）",
+        "RAGAS评估框架",
+        "Trulens可观测性",
+        "Bad Case分析方法"
+      ],
+      "teaching_objectives": [
+        "理解RAG评估维度",
+        "掌握主流评估工具",
+        "能够系统性评估和优化"
+      ],
+      "content_file": "lessons/08-rag-evaluation/content.md",
+      "code_examples": [
+        {
+          "filename": "evaluator.py",
+          "language": "python",
+          "description": "RAG评估工具"
+        }
+      ]
+    },
+    {
+      "lesson_id": "09",
+      "title": "企业级RAG实战",
+      "slug": "enterprise-rag-practice",
+      "core_knowledge_points": [
+        "从原型到生产的架构演进",
+        "工程化最佳实践",
+        "缓存策略与并发处理",
+        "安全与合规",
+        "监控与日志"
+      ],
+      "teaching_objectives": [
+        "理解企业级RAG架构设计",
+        "掌握工程化最佳实践",
+        "能够设计完整的生产级RAG系统"
+      ],
+      "content_file": "lessons/09-enterprise-rag-practice/content.md",
+      "code_examples": [
+        {
+          "filename": "rag_system.py",
+          "language": "python",
+          "description": "企业级RAG系统框架"
+        },
+        {
+          "filename": "config.py",
+          "language": "python",
+          "description": "配置管理"
+        }
+      ]
+    }
+  ]
+}
